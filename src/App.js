@@ -26,7 +26,9 @@ const animals = ['elephant', 'tiger', 'orangutan', 'rhino'];
         {elephant.name}
         <br />
         {tiger.name}
+        <br />
         {orangutan.name}
+        <br />
         {rhino.name}
 
         <img src="https://www.ecosia.org/images?q=sumatran+forest" />
