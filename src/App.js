@@ -24,6 +24,7 @@ const animals = ['elephant', 'tiger', 'orangutan', 'rhino'];
       <div>
 
         {elephant.name}
+        <br />
         {tiger.name}
         {orangutan.name}
         {rhino.name}
