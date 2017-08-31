@@ -18,7 +18,7 @@ class App extends Component {
       name: "Sumatran Rhino"
   }
 
-const animals = ['elephant', 'tiger', 'orangutan', 'rhino'];
+  //const animals = ['elephant', 'tiger', 'orangutan', 'rhino'];
 
     return (
       <div>
