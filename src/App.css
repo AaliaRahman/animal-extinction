@@ -22,3 +22,46 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+h1{
+  font-family: 'Unica One', cursive;
+  color: #000000;
+  padding: 2%;
+}
+p, li{
+  font-family: 'Palanquin', sans-serif;
+  font-size: 1.375em;
+}
+a{
+  font-family: 'Palanquin', sans-serif;
+  font-weight: 100;
+  color: #CC3727;
+  text-transform: uppercase;
+}
+ul{
+list-style-type: none;
+display: inline-flex;
+text-align: center;
+width: 100%;
+}
+li{
+  padding: 2%;
+}
+img{
+  width: 100%;
+}
+.elephant img{
+  width: 20%;
+  z-index: 3;
+  position: absolute;
+  bottom: 15%;
+}
+.Srhino {
+  width: 20%;
+  z-index: 3;
+  position: absolute;
+  bottom: 17%;
+  right: 20%;
+}
+.Srhino:hover{
+  display: block;
+}
