@@ -24,8 +24,15 @@
 }
 h1{
   font-family: 'Unica One', cursive;
-  color: #000000;
+  color: #CC3727;
   padding: 2%;
+  text-align: center;
+}
+h2{
+  font-family: 'Unica One', cursive;
+  color: #FFFFFF;
+  padding: 2%;
+  text-align: center;
 }
 p, li{
   font-family: 'Palanquin', sans-serif;
@@ -34,8 +41,13 @@ p, li{
 a{
   font-family: 'Palanquin', sans-serif;
   font-weight: 100;
-  color: #CC3727;
+  color: #000000;
   text-transform: uppercase;
+  text-decoration: none;
+}
+a:hover {
+  color: #CC3727;
+  text-decoration: none;
 }
 ul{
 list-style-type: none;
@@ -44,16 +56,33 @@ text-align: center;
 width: 100%;
 }
 li{
-  padding: 2%;
+  padding-top: 1%;
 }
 img{
   width: 100%;
 }
-.elephant img{
+.Selephant{
   width: 20%;
   z-index: 3;
   position: absolute;
   bottom: 15%;
+}
+.ElephantInfo{
+  display: none;
+}
+.Selephant:hover + .ElephantInfo{
+  display: block;
+  background-color: #CC3727;
+  color: #FFFFFF;
+  width: 10%;
+  font-family: 'Palanquin', sans-serif;
+  font-weight: 100;
+  font-size: 0.7em;
+  padding: 2%;
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  text-transform: uppercase;
 }
 .Srhino {
   width: 20%;
@@ -62,6 +91,28 @@ img{
   bottom: 17%;
   right: 20%;
 }
-.Srhino:hover{
+.RhinoInfo{
+  display: none;
+}
+.Srhino:hover + .RhinoInfo{
   display: block;
+  background-color: #CC3727;
+  color: #FFFFFF;
+  width: 10%;
+  font-family: 'Palanquin', sans-serif;
+  font-weight: 100;
+  font-size: 0.7em;
+  padding: 2%;
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  text-transform: uppercase;
+}
+
+footer{
+  color: #CC3727;
+  font-family: 'Palanquin', sans-serif;
+  font-weight: 100;
+  font-size: 0.7em;
+  padding: 1%;
 }

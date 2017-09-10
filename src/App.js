@@ -34,31 +34,43 @@ class App extends Component {
       <div className="container">
 
       <h1>The History and Future of Animal Extinction</h1>
+
+      <div className="present">
       <img src="./images/SumatranForest.jpg" />
 
-        <div className="elephant">
-        <img src={elephant.src} />
+        <div>
+        <img src={elephant.src} className="Selephant"/>
+        <div className="ElephantInfo">
+        <h2>{elephant.name}</h2>
+        <p>{elephant.status}</p>
+        <p>{elephant.population}</p>
+        </div>
         </div>
 
-
+        <div>
         <img src={rhino.src}  className="Srhino"/>
+        <div className="RhinoInfo">
+        <h2>{rhino.name}</h2>
+        <p>{rhino.status}</p>
+        <p>{rhino.population}</p>
+        </div>
+        </div>
 
-        <div className="RhinoInformation">
         </div>
 
         <nav>
-        <ul>
-        <li><a href="#">Past</a></li>
-        <li></li>
-        <li><a href="#">Present</a></li>
-        <li></li>
-        <li><a href="#">Future</a></li>
+        <ul className="row">
+        <li className="col-md-2 col-md-offset-1"><a href="#">Past</a></li>
+        <li className="col-md-2"><a href="#"><i className="glyphicon glyphicon-minus-sign">•</i></a></li>
+        <li className="col-md-2"><a href="#">Present</a></li>
+        <li className="col-md-2"><a href="#">•</a></li>
+        <li className="col-md-2"><a href="#">Future</a></li>
         </ul>
         </nav>
 
+        <footer>All information was retrieved from World Wildlife Fund. View their website for more information.</footer>
 
-      </div>
-
+        </div>
     );
   }
 }
