@@ -108,6 +108,9 @@ img{
   right: 10%;
   text-transform: uppercase;
 }
+.Past{
+  display: none;
+}
 
 footer{
   color: #CC3727;

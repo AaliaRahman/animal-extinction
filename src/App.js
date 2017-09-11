@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     const elephant = {
       name:"Sumatran Elephant",
-      src: "./images/elephant-sample.png",
+      src: "./images/SumatranElephant.png",
       population: "2,400-2,800",
       status: "Critically Endangered"
     };
@@ -27,8 +27,15 @@ class App extends Component {
       population: "<100",
       status: "Critically Endangered"
   }
+  const mammoth = {
+    name: "Wooly Mammoth",
+    src: "./images/Mammoth.png",
+    status: "Currently Extinct"
+}
+
 
   const animals = ['elephant', 'tiger', 'orangutan', 'rhino'];
+
 
     return (
       <div className="container">
@@ -55,6 +62,21 @@ class App extends Component {
         <p>{rhino.population}</p>
         </div>
         </div>
+
+        </div>
+
+        <div className="Past">
+        <img src="./images/IceAge.jpg" />
+
+        <div>
+        <img src={mammoth.src}  className="Selephant"/>
+        <div className="ElephantInfo">
+        <h2>{mammoth.name}</h2>
+        <p>{mammoth.status}</p>
+        <p>{mammoth.population}</p>
+        </div>
+        </div>
+
 
         </div>
 
