@@ -10,7 +10,7 @@ class App extends Component {
       src: "./images/SumatranElephant.png",
       population: "2,400-2,800",
       status: "Critically Endangered"
-    };
+    }
     const tiger = {
       name: "Sumatran Tiger",
       population: "400-500",
@@ -32,7 +32,11 @@ class App extends Component {
     src: "./images/Mammoth.png",
     status: "Currently Extinct"
 }
-
+const wrhino ={
+  name: "Wooly Rhino",
+  src: "./images/WoolyRhino.png",
+  status: "Currently Extinct"
+}
 
   const animals = ['elephant', 'tiger', 'orangutan', 'rhino'];
 
@@ -77,12 +81,20 @@ class App extends Component {
         </div>
         </div>
 
+        <div>
+        <img src={mammoth.src}  className="Selephant"/>
+        <div className="ElephantInfo">
+        <h2>{mammoth.name}</h2>
+        <p>{mammoth.status}</p>
+        <p>{mammoth.population}</p>
+        </div>
+        </div>
 
         </div>
 
         <nav>
         <ul className="row">
-        <li className="col-md-2 col-md-offset-1"><a href="#">Past</a></li>
+        <li className="col-md-2 col-md-offset-1" onClick={this.handleClick}><a href="#">Past</a></li>
         <li className="col-md-2"><a href="#"><i className="glyphicon glyphicon-minus-sign">•</i></a></li>
         <li className="col-md-2"><a href="#">Present</a></li>
         <li className="col-md-2"><a href="#">•</a></li>
@@ -94,8 +106,8 @@ class App extends Component {
 
         </div>
     );
-  }
-}
+  };
+};
 
 
 
