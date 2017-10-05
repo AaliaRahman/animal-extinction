@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+//import './database.js';
 
 
 class App extends Component {
   constructor(props) {
      super(props);
-     this.state = {timePeriod: 'present'};
+     this.state = {
+       timePeriod: 'present'
+     };
+    this.handleClick = this.handleClick.bind(this);
    }
 
-  handleClick = () => {
-    console.log("Why isn't this working?")
-    this.setState({timePeriod: 'present'});
-}
+   handleClick(timePeriodWePassedInFromTheFunction){
+  //  handleClick = () => {
+    this.setState({
+      timePeriod: timePeriodWePassedInFromTheFunction})
+      //We want the timePeriod to be the timePeriod/link that is clicked.
+    };
 
   render() {
+    console.log("timeperiod is " + this.state.timePeriod )
     const elephant = {
       name:"Sumatran Elephant",
       src: "./images/SumatranElephant.png",
@@ -42,7 +48,7 @@ class App extends Component {
     src: "./images/Mammoth.png",
     status: "Currently Extinct"
 }
-const wrhino = {
+  const wrhino = {
   name: "Wooly Rhino",
   src: "./images/WoolyRhino.png",
   status: "Currently Extinct"
@@ -50,9 +56,9 @@ const wrhino = {
 
   const animals = ['elephant', 'tiger', 'orangutan', 'rhino'];
   //const event = document.getElementsByClassName("Past");
-
   let timePeriod = null;
-  if(this.state.timePeriod === "present") {
+//  if(this.state.timePeriod ? 'show' : 'hide') {
+  if(this.state.timePeriod === 'present'){
     timePeriod = (
       <div className="present">
     <img src="./images/SumatranForest.jpg" />
@@ -77,9 +83,9 @@ const wrhino = {
 
       </div>)
 
-  } else if(this.state.timePeriod === "Past") {
+  } else if (this.state.timePeriod === "Past") {
     timePeriod = (
-    <div className="Past">
+    <div>
     <img src="./images/IceAge.jpg" />
 
     <div>
@@ -102,8 +108,10 @@ const wrhino = {
 
     </div>)
   } else {
-    timePeriod =(
-      <div></div>
+    timePeriod = (
+      <div className="Future">
+
+      </div>
     )
   }
 
@@ -113,26 +121,27 @@ const wrhino = {
       {timePeriod}
 
 
-
-
         <nav>
         <ul className="row">
-        <li className="col-md-2 col-md-offset-1" onClick={this.handleClick}><a href="#">Past</a></li>
+
+        <li className="col-md-2 col-md-offset-1 Past" onClick={ function() {this.handleClick("Past")}.bind(this) }><a href="#">Past</a></li>
+
         <li className="col-md-2"><a href="#"><i className="glyphicon glyphicon-minus-sign">•</i></a></li>
-        <li className="col-md-2" onClick={this.handleClick}><a href="#">Present</a></li>
+
+        <li className="col-md-2 present" onClick={function() {this.handleClick('present')}.bind(this)}><a href="#">Present</a></li>
+
         <li className="col-md-2"><a href="#">•</a></li>
-        <li className="col-md-2" onClick={this.handleClick}><a href="#">Future</a></li>
+
+        <li className="col-md-2" onClick={function() {this.handleClick('Future')}.bind(this)}><a href="#">Future</a></li>
         </ul>
         </nav>
 
         <footer>All information was retrieved from World Wildlife Fund. View their website for more information.</footer>
 
-        <div>{this.state.timePeriod}</div>
         </div>
     );
   };
-};
-
+}
 
 
 export default App;
