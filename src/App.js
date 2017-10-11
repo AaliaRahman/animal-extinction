@@ -53,6 +53,18 @@ class App extends Component {
   src: "./images/WoolyRhino.png",
   status: "Currently Extinct"
 }
+  const elephantRemains = {
+    name: "Elephant Remains",
+    src: "./images/Elephant_skull.png",
+    status: "Extinct",
+    population: "At the current rate of poaching, conservationists estimate that elephants will go extinct by 2020."
+  }
+  const rhinoRemains = {
+    name: "Rhino Remains",
+    src: "./images/rhinoRemains.png",
+    status: "Extinct",
+    population: "At the current rate of poaching, conservationists estimate that rhinos will go extinct by 2026."
+  }
 
   const animals = ['elephant', 'tiger', 'orangutan', 'rhino'];
   //const event = document.getElementsByClassName("Past");
@@ -98,11 +110,11 @@ class App extends Component {
     </div>
 
     <div>
-    <img src={mammoth.src}  className="Selephant"/>
-    <div className="ElephantInfo">
-    <h2>{mammoth.name}</h2>
-    <p>{mammoth.status}</p>
-    <p>{mammoth.population}</p>
+    <img src={wrhino.src}  className="Srhino"/>
+    <div className="RhinoInfo">
+    <h2>{wrhino.name}</h2>
+    <p>{wrhino.status}</p>
+    <p>{wrhino.population}</p>
     </div>
     </div>
 
@@ -110,6 +122,25 @@ class App extends Component {
   } else {
     timePeriod = (
       <div className="Future">
+      <img src="./images/Future_background.jpg" />
+
+      <div>
+      <img src={elephantRemains.src}  className="Selephant"/>
+      <div className="ElephantInfo">
+      <h2>{elephantRemains.name}</h2>
+      <p>{elephantRemains.status}</p>
+      <p>{elephantRemains.population}</p>
+      </div>
+      </div>
+
+      <div>
+      <img src={rhinoRemains.src}  className="Srhino"/>
+      <div className="RhinoInfo">
+      <h2>{rhinoRemains.name}</h2>
+      <p>{rhinoRemains.status}</p>
+      <p>{rhinoRemains.population}</p>
+      </div>
+      </div>
 
       </div>
     )
