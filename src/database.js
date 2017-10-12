@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import './App.js';
+//import './App.js';
 
 
 export class Database extends Component {
@@ -41,11 +41,21 @@ render(){
     name: "Wooly Rhino",
     src: "./images/WoolyRhino.png",
     status: "Currently Extinct"
-}]
+  },{
+      name: "Elephant Remains",
+      src: "./images/Elephant_skull.png",
+      status: "Extinct",
+      population: "At the current rate of poaching, conservationists estimate that elephants will go extinct by 2020."
+    },{
+      name: "Rhino Remains",
+      src: "./images/rhinoRemains.png",
+      status: "Extinct",
+      population: "At the current rate of poaching, conservationists estimate that rhinos will go extinct by 2026."
+    }]
 
-return(
-
-
-    );
+return (
+<div>
+</div>
+);
   };
-};
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-//import './database.js';
+//import Database from './database.js';
 
 
 class App extends Component {
@@ -21,6 +21,7 @@ class App extends Component {
 
   render() {
     console.log("timeperiod is " + this.state.timePeriod )
+//    console.log(animalsData[1].src)
     const elephant = {
       name:"Sumatran Elephant",
       src: "./images/SumatranElephant.png",
@@ -75,10 +76,10 @@ class App extends Component {
       <div className="present">
     <img src="./images/SumatranForest.jpg" />
 
-      <div>
+      <div className="wholeAnimal">
       <img src={elephant.src} className="Selephant"/>
       <div className="ElephantInfo">
-      <h2>{elephant.name}</h2>
+      <h4>{elephant.name}</h4>
       <p>{elephant.status}</p>
       <p>{elephant.population}</p>
       </div>
@@ -87,7 +88,7 @@ class App extends Component {
       <div>
       <img src={rhino.src}  className="Srhino"/>
       <div className="RhinoInfo">
-      <h2>{rhino.name}</h2>
+      <h4>{rhino.name}</h4>
       <p>{rhino.status}</p>
       <p>{rhino.population}</p>
       </div>
@@ -103,7 +104,7 @@ class App extends Component {
     <div>
     <img src={mammoth.src}  className="Selephant"/>
     <div className="ElephantInfo">
-    <h2>{mammoth.name}</h2>
+    <h4>{mammoth.name}</h4>
     <p>{mammoth.status}</p>
     <p>{mammoth.population}</p>
     </div>
@@ -112,7 +113,7 @@ class App extends Component {
     <div>
     <img src={wrhino.src}  className="Srhino"/>
     <div className="RhinoInfo">
-    <h2>{wrhino.name}</h2>
+    <h4>{wrhino.name}</h4>
     <p>{wrhino.status}</p>
     <p>{wrhino.population}</p>
     </div>
@@ -127,7 +128,7 @@ class App extends Component {
       <div>
       <img src={elephantRemains.src}  className="Selephant"/>
       <div className="ElephantInfo">
-      <h2>{elephantRemains.name}</h2>
+      <h4>{elephantRemains.name}</h4>
       <p>{elephantRemains.status}</p>
       <p>{elephantRemains.population}</p>
       </div>
@@ -136,7 +137,7 @@ class App extends Component {
       <div>
       <img src={rhinoRemains.src}  className="Srhino"/>
       <div className="RhinoInfo">
-      <h2>{rhinoRemains.name}</h2>
+      <h4>{rhinoRemains.name}</h4>
       <p>{rhinoRemains.status}</p>
       <p>{rhinoRemains.population}</p>
       </div>
@@ -157,17 +158,20 @@ class App extends Component {
 
         <li className="col-md-2 col-md-offset-1 Past" onClick={ function() {this.handleClick("Past")}.bind(this) }><a href="#">Past</a></li>
 
-        <li className="col-md-2"><a href="#"><i className="glyphicon glyphicon-minus-sign">•</i></a></li>
+        <li className="col-md-2"><a href="#"><img src="./images/Minus.png"/></a></li>
 
         <li className="col-md-2 present" onClick={function() {this.handleClick('present')}.bind(this)}><a href="#">Present</a></li>
 
-        <li className="col-md-2"><a href="#">•</a></li>
+        <li className="col-md-2"><a href="#"><img src="./images/Plus.png"/></a></li>
 
         <li className="col-md-2" onClick={function() {this.handleClick('Future')}.bind(this)}><a href="#">Future</a></li>
         </ul>
         </nav>
 
-        <footer>All information was retrieved from World Wildlife Fund. View their website for more information.</footer>
+        <footer>
+        <p>All information was retrieved from World Wildlife Fund. View their website for more information.
+        </p>
+        </footer>
 
         </div>
     );
