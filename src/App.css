@@ -67,59 +67,36 @@ li{
 img{
   width: 100%;
 }
-.wholeAnimal{
+.present img{
   display: flex;
-  align-content: center;
-  width: 10%;
+    flex-flow: column wrap;
 }
-
-.Selephant{
-  width: 15%;
-  z-index: 3;
-  position: absolute;
-  bottom: 15%;
-}
-.ElephantInfo{
-  display: none;
-}
-.Selephant:hover + .ElephantInfo{
-  display:flex;
-  flex-wrap: wrap;
-  background-color: #CC3727;
-  color: #FFFFFF;
-  width: 10%;
-  font-family: 'Palanquin', sans-serif;
-  font-weight: 100;
-  font-size: 0.5em;
-  padding: 0.5%;
-  position: absolute;
-  bottom: 20%;
-  left: 20%;
-  text-transform: uppercase;
-}
-.Srhino {
+.present .wholeAnimal{
+  display: inlin-flex;
+  flex-flow: column wrap;
   width: 20%;
   z-index: 3;
-  position: absolute;
-  bottom: 17%;
-  right: 20%;
+  /*align-items: baseline;
+  padding: 0;
+  margin: 0;*/
 }
-.RhinoInfo{
+@keyframes slide {
+  0% {left: 0px; top:0px;}
+  25%  {left:20%; top:10%;}
+}
+/*.wholeAnimal div{
   display: none;
-}
-.Srhino:hover + .RhinoInfo{
-  display: flex;
-  flex-wrap: wrap;
+}*/
+.wholeAnimal div {
+  display: inline-flex;
+  flex-flow: column wrap;
+  align-content: space-between;
   background-color: #CC3727;
   color: #FFFFFF;
-  width: 10%;
   font-family: 'Palanquin', sans-serif;
   font-weight: 100;
   font-size: 0.5em;
-  padding: 0.5%;
-  position: absolute;
-  bottom: 30%;
-  right: 30%;
+  padding: 3%;
   text-transform: uppercase;
 }
 li img{

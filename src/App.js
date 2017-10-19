@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-//import Database from './database.js';
+import data from './database.js';
 
 
 class App extends Component {
@@ -20,79 +20,31 @@ class App extends Component {
     };
 
   render() {
-    console.log("timeperiod is " + this.state.timePeriod )
-//    console.log(animalsData[1].src)
-    const elephant = {
-      name:"Sumatran Elephant",
-      src: "./images/SumatranElephant.png",
-      population: "2,400-2,800",
-      status: "Critically Endangered"
-    }
-    const tiger = {
-      name: "Sumatran Tiger",
-      population: "400-500",
-      status: "Critically Endangered"
-    }
-    const orangutan = {
-      name: "Sumatran Orangutan",
-      population: "14,613",
-      status: "Critically Endangered"
-    }
-    const rhino = {
-      name: "Sumatran Rhino",
-      src: "./images/SumatranRhino.png",
-      population: "<100",
-      status: "Critically Endangered"
-  }
-  const mammoth = {
-    name: "Wooly Mammoth",
-    src: "./images/Mammoth.png",
-    status: "Currently Extinct"
-}
-  const wrhino = {
-  name: "Wooly Rhino",
-  src: "./images/WoolyRhino.png",
-  status: "Currently Extinct"
-}
-  const elephantRemains = {
-    name: "Elephant Remains",
-    src: "./images/Elephant_skull.png",
-    status: "Extinct",
-    population: "At the current rate of poaching, conservationists estimate that elephants will go extinct by 2020."
-  }
-  const rhinoRemains = {
-    name: "Rhino Remains",
-    src: "./images/rhinoRemains.png",
-    status: "Extinct",
-    population: "At the current rate of poaching, conservationists estimate that rhinos will go extinct by 2026."
-  }
 
-  const animals = ['elephant', 'tiger', 'orangutan', 'rhino'];
-  //const event = document.getElementsByClassName("Past");
   let timePeriod = null;
-//  if(this.state.timePeriod ? 'show' : 'hide') {
   if(this.state.timePeriod === 'present'){
     timePeriod = (
       <div className="present">
-    <img src="./images/SumatranForest.jpg" />
+        <img src="./images/SumatranForest.jpg" />
 
-      <div className="wholeAnimal">
-      <img src={elephant.src} className="Selephant"/>
-      <div className="ElephantInfo">
-      <h4>{elephant.name}</h4>
-      <p>{elephant.status}</p>
-      <p>{elephant.population}</p>
-      </div>
-      </div>
+        <div className="wholeAnimal">
+          <img src={data[0].src}/>
+          <div>
+            <h4>{data[0].name}</h4>
+            <p>{data[0].status}</p>
+            <p>{data[0].population}</p>
+          </div>
+        </div>
 
-      <div>
-      <img src={rhino.src}  className="Srhino"/>
-      <div className="RhinoInfo">
-      <h4>{rhino.name}</h4>
-      <p>{rhino.status}</p>
-      <p>{rhino.population}</p>
-      </div>
-      </div>
+
+          <div className="wholeAnimal">
+            <img src={data[1].src}/>
+            <div>
+              <h4>{data[1].name}</h4>
+              <p>{data[1].status}</p>
+              <p>{data[1].population}</p>
+            </div>
+          </div>
 
       </div>)
 
@@ -101,21 +53,21 @@ class App extends Component {
     <div>
     <img src="./images/IceAge.jpg" />
 
+    <div className="wholeAnimal">
+    <img src={data[4].src}/>
     <div>
-    <img src={mammoth.src}  className="Selephant"/>
-    <div className="ElephantInfo">
-    <h4>{mammoth.name}</h4>
-    <p>{mammoth.status}</p>
-    <p>{mammoth.population}</p>
+    <h4>{data[4].name}</h4>
+    <p>{data[4].status}</p>
+    <p>{data[4].population}</p>
     </div>
     </div>
 
+    <div className="wholeAnimal">
+    <img src={data[5].src} />
     <div>
-    <img src={wrhino.src}  className="Srhino"/>
-    <div className="RhinoInfo">
-    <h4>{wrhino.name}</h4>
-    <p>{wrhino.status}</p>
-    <p>{wrhino.population}</p>
+    <h4>{data[5].name}</h4>
+    <p>{data[5].status}</p>
+    <p>{data[5].population}</p>
     </div>
     </div>
 
@@ -125,21 +77,21 @@ class App extends Component {
       <div className="Future">
       <img src="./images/Future_background.jpg" />
 
-      <div>
-      <img src={elephantRemains.src}  className="Selephant"/>
-      <div className="ElephantInfo">
-      <h4>{elephantRemains.name}</h4>
-      <p>{elephantRemains.status}</p>
-      <p>{elephantRemains.population}</p>
+      <div className="wholeAnimal">
+      <img src={data[7].src} />
+      <div >
+      <h4>{data[7].name}</h4>
+      <p>{data[7].status}</p>
+      <p>{data[7].population}</p>
       </div>
       </div>
 
+      <div className="wholeAnimal">
+      <img src={data[8].src}/>
       <div>
-      <img src={rhinoRemains.src}  className="Srhino"/>
-      <div className="RhinoInfo">
-      <h4>{rhinoRemains.name}</h4>
-      <p>{rhinoRemains.status}</p>
-      <p>{rhinoRemains.population}</p>
+      <h4>{data[8].name}</h4>
+      <p>{data[8].status}</p>
+      <p>{data[8].population}</p>
       </div>
       </div>
 
