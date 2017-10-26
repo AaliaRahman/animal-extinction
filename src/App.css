@@ -67,27 +67,32 @@ li{
 img{
   width: 100%;
 }
-.present img{
-  display: flex;
+/*.present img{
+  display: inline-flex;
     flex-flow: column wrap;
-}
-.present .wholeAnimal{
-  display: inlin-flex;
-  flex-flow: column wrap;
+}*/
+.wholeAnimal{
+  display: inline-flex;
+  flex-flow: column nowrap;
   width: 20%;
   z-index: 3;
-  /*align-items: baseline;
-  padding: 0;
-  margin: 0;*/
 }
-@keyframes slide {
+.selephant{
+  position: absolute;
+  top: 60%;
+}
+.srhino{
+  position: absolute;
+}
+
+/*@keyframes slide {
   0% {left: 0px; top:0px;}
   25%  {left:20%; top:10%;}
-}
-/*.wholeAnimal div{
-  display: none;
 }*/
-.wholeAnimal div {
+.animalInfo{
+  display: none;
+}
+.wholeAnimal:hover + .animalInfo {
   display: inline-flex;
   flex-flow: column wrap;
   align-content: space-between;
@@ -96,8 +101,9 @@ img{
   font-family: 'Palanquin', sans-serif;
   font-weight: 100;
   font-size: 0.5em;
-  padding: 3%;
+  padding: 0.5%;
   text-transform: uppercase;
+  position: relative;
 }
 li img{
   width: 10%;
