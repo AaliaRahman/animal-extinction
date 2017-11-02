@@ -27,7 +27,7 @@ class App extends Component {
       <div className="present">
         <img src="./images/SumatranForest.jpg" />
 
-        <div className="selephant">
+        <div className="elephant">
           <img src={data[0].src} className="wholeAnimal"/>
           <div className="animalInfo">
             <h4>{data[0].name}</h4>
@@ -37,7 +37,16 @@ class App extends Component {
         </div>
 
 
-          <div className="srhino">
+          <div className="sTiger">
+            <img src={data[2].src} className="wholeAnimal"/>
+            <div className="animalInfo">
+              <h4>{data[2].name}</h4>
+              <p>{data[2].status}</p>
+              <p>{data[2].population}</p>
+            </div>
+          </div>
+
+          <div className="animal_frontRight">
             <img src={data[1].src} className="wholeAnimal"/>
             <div className="animalInfo">
               <h4>{data[1].name}</h4>
@@ -53,7 +62,7 @@ class App extends Component {
     <div>
     <img src="./images/IceAge.jpg" />
 
-    <div>
+    <div className="animal_frontLeft">
       <img src={data[4].src} className="wholeAnimal"/>
       <div className="animalInfo">
         <h4>{data[4].name}</h4>
@@ -62,7 +71,7 @@ class App extends Component {
       </div>
     </div>
 
-    <div>
+    <div className="animal_frontRight">
       <img src={data[5].src} className="wholeAnimal"/>
       <div className="animalInfo">
         <h4>{data[5].name}</h4>
@@ -71,7 +80,7 @@ class App extends Component {
       </div>
     </div>
 
-    <div>
+    <div className="animal_backR">
       <img src={data[6].src} className="wholeAnimal"/>
       <div className="animalInfo">
         <h4>{data[6].name}</h4>
@@ -86,7 +95,7 @@ class App extends Component {
       <div className="Future">
       <img src="./images/Future_background.jpg" />
 
-      <div>
+      <div className="animal_backL">
         <img src={data[7].src} className="wholeAnimal"/>
         <div className="animalInfo">
           <h4>{data[7].name}</h4>
@@ -95,7 +104,7 @@ class App extends Component {
         </div>
       </div>
 
-      <div>
+      <div className="animal_backR">
         <img src={data[8].src} className="wholeAnimal"/>
         <div className="animalInfo">
           <h4>{data[8].name}</h4>
@@ -130,7 +139,7 @@ class App extends Component {
         </nav>
 
         <footer>
-        <p>All information was retrieved from World Wildlife Fund. View their website for more information.
+        <p>All information was retrieved from <a href="https://www.worldwildlife.org">World Wildlife Fund</a>. View their website for more information.
         </p>
         </footer>
 

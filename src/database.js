@@ -15,6 +15,7 @@ export default [{
     status: "Critically Endangered"
   },{
     name: "Sumatran Tiger",
+    src: "./images/SumatranTiger.png",
     population: "400-500",
     status: "Critically Endangered"
   },{
