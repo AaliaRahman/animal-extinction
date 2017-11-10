@@ -38,6 +38,7 @@ h2{
 h4{
   font-family: 'Unica One', cursive;
   color: #FFFFFF;
+  font-size: 2em;
 }
 p, li{
   font-family: 'Palanquin', sans-serif;
@@ -71,24 +72,59 @@ img{
   display: inline-flex;
   flex-flow: column nowrap;
   width: 25%;
-  z-index: 3;
+  z-index: 2;
 }
-.animal_frontLeft{
+.slide{
+  position: relative;
+  overflow-x: hidden;
+  max-width: 100%;
+
+  transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.slide.closed {
+	max-width: 0;
+}
+.elephant{
+  position: absolute;
+  top: 58%;
+  width: 90%;
+}
+.sTiger{
+  width: 60%;
+  position: absolute;
+  top: 65%;
+  left: 40%;
+}
+.sorganutan{
+  position: absolute;
+  top: 36%;
+  left: 30%;
+  width: 30%;
+}
+.wmammoth{
   width: 80%;
   position: absolute;
-  top: 50%;
+  top: 35%;
 }
-.animal_frontRight{
+.srhino{
   width: 80%;
   position: absolute;
   top: 65%;
   left: 70%;
 }
+.wrhino{
+  width: 80%;
+  position: absolute;
+  top: 55%;
+  left: 70%;
+}
 .animal_backL{
   position: absolute;
-  top: 70%;
+  top: 55%;
   left: 30%;
-  width: 100%;
+  width: 80%;
 }
 .animal_backR{
   position: absolute;
@@ -96,18 +132,7 @@ img{
   left: 50%;
   width: 30%;
 }
-.elephant{
-  position: absolute;
-  top: 60%;
-  z-index: 4;
-}
-.sTiger{
-  width: 60%;
-  position: absolute;
-  top: 65%;
-  left: 25%;
 
-}
 /*@keyframes slide {
   0% {left: 0px; top:0px;}
   25%  {left:20%; top:10%;}
@@ -127,6 +152,7 @@ img{
   padding: 1%;
   text-transform: uppercase;
   position: relative;
+  z-index: 10;
 }
 li img{
   width: 10%;

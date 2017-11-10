@@ -20,6 +20,7 @@ export default [{
     status: "Critically Endangered"
   },{
     name: "Sumatran Orangutan",
+    src: "./images/SumatranOrangutan.png",
     population: "14,613",
     status: "Critically Endangered"
   },{
@@ -33,6 +34,10 @@ export default [{
   },{
     name: "Sabertooth",
     src: "./images/Sabertooth.png",
+    status: "Currently Extinct"
+  },{
+    name: "Giant Sloth",
+    src: "./images/GiantSloth.png",
     status: "Currently Extinct"
   },{
       name: "Elephant Remains",

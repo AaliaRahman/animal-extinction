@@ -24,34 +24,38 @@ class App extends Component {
   let timePeriod = null;
   if(this.state.timePeriod === 'present'){
     timePeriod = (
-      <div className="present">
-        <img src="./images/SumatranForest.jpg" />
+      <div className="slide">
+        <img src="./images/SumatranForest.jpg"  className="slidePic"/>
 
         <div className="elephant">
           <img src={data[0].src} className="wholeAnimal"/>
           <div className="animalInfo">
             <h4>{data[0].name}</h4>
-            <p>{data[0].status}</p>
-            <p>{data[0].population}</p>
+            <p>{data[0].status}<br />{data[0].population}</p>
           </div>
         </div>
 
-
-          <div className="sTiger">
-            <img src={data[2].src} className="wholeAnimal"/>
-            <div className="animalInfo">
-              <h4>{data[2].name}</h4>
-              <p>{data[2].status}</p>
-              <p>{data[2].population}</p>
-            </div>
+        <div className="sTiger">
+          <img src={data[2].src} className="wholeAnimal"/>
+          <div className="animalInfo">
+            <h4>{data[2].name}</h4>
+            <p>{data[2].status}<br />{data[2].population}</p>
           </div>
+        </div>
 
-          <div className="animal_frontRight">
+          <div className="srhino">
             <img src={data[1].src} className="wholeAnimal"/>
             <div className="animalInfo">
               <h4>{data[1].name}</h4>
-              <p>{data[1].status}</p>
-              <p>{data[1].population}</p>
+              <p>{data[1].status}<br />{data[1].population}</p>
+            </div>
+          </div>
+
+          <div className="sorganutan">
+            <img src={data[3].src} className="wholeAnimal"/>
+            <div className="animalInfo">
+              <h4>{data[3].name}</h4>
+              <p>{data[3].status}<br />{data[3].population}</p>
             </div>
           </div>
 
@@ -59,24 +63,22 @@ class App extends Component {
 
   } else if (this.state.timePeriod === "Past") {
     timePeriod = (
-    <div>
-    <img src="./images/IceAge.jpg" />
+    <div className="slide">
+    <img src="./images/IceAge.jpg" className="slidePic"/>
 
-    <div className="animal_frontLeft">
+    <div className="wmammoth">
       <img src={data[4].src} className="wholeAnimal"/>
       <div className="animalInfo">
         <h4>{data[4].name}</h4>
         <p>{data[4].status}</p>
-        <p>{data[4].population}</p>
       </div>
     </div>
 
-    <div className="animal_frontRight">
+    <div className="wrhino">
       <img src={data[5].src} className="wholeAnimal"/>
       <div className="animalInfo">
         <h4>{data[5].name}</h4>
         <p>{data[5].status}</p>
-        <p>{data[5].population}</p>
       </div>
     </div>
 
@@ -85,31 +87,36 @@ class App extends Component {
       <div className="animalInfo">
         <h4>{data[6].name}</h4>
         <p>{data[6].status}</p>
-        <p>{data[6].population}</p>
+      </div>
+    </div>
+
+    <div className="animal_backL">
+      <img src={data[7].src} className="wholeAnimal"/>
+      <div className="animalInfo">
+        <h4>{data[7].name}</h4>
+        <p>{data[7].status}</p>
       </div>
     </div>
 
     </div>)
   } else {
     timePeriod = (
-      <div className="Future">
-      <img src="./images/Future_background.jpg" />
+      <div className="slide">
+      <img src="./images/Future_background.jpg"  className="slidePic"/>
 
       <div className="animal_backL">
-        <img src={data[7].src} className="wholeAnimal"/>
+        <img src={data[8].src} className="wholeAnimal"/>
         <div className="animalInfo">
-          <h4>{data[7].name}</h4>
-          <p>{data[7].status}</p>
-          <p>{data[7].population}</p>
+          <h4>{data[8].name}</h4>
+          <p>{data[8].status}<br />{data[8].population}</p>
         </div>
       </div>
 
       <div className="animal_backR">
-        <img src={data[8].src} className="wholeAnimal"/>
+        <img src={data[9].src} className="wholeAnimal"/>
         <div className="animalInfo">
-          <h4>{data[8].name}</h4>
-          <p>{data[8].status}</p>
-          <p>{data[8].population}</p>
+          <h4>{data[9].name}</h4>
+          <p>{data[9].status}<br />{data[9].population}</p>
         </div>
       </div>
 
@@ -118,6 +125,7 @@ class App extends Component {
   }
 
     return (
+
       <div className="container">
       <h1>The History and Future of Animal Extinction</h1>
       {timePeriod}
