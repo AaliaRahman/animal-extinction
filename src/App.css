@@ -73,19 +73,29 @@ img{
   flex-flow: column nowrap;
   width: 25%;
   z-index: 2;
-}
-.slide{
-  position: relative;
-  overflow-x: hidden;
-  max-width: 100%;
 
-  transition-property: all;
-	transition-duration: .5s;
-	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
-.slide.closed {
-	max-width: 0;
+.absolute{
+  position: relative;
+    overflow: hidden;
+    height: 600px;
 }
+.closed{
+  animation: slide 4s forwards;
+  animation-delay: 0s;
+  position: absolute;
+  left: -200px;
+
+}
+@keyframes slide {
+0% {
+  transform: translateX(0px);
+}
+100%{
+  transform: translateX(250px);
+}
+}
+
 .elephant{
   position: absolute;
   top: 58%;

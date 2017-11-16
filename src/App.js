@@ -24,8 +24,9 @@ class App extends Component {
   let timePeriod = null;
   if(this.state.timePeriod === 'present'){
     timePeriod = (
-      <div className="slide">
-        <img src="./images/SumatranForest.jpg"  className="slidePic"/>
+        <div className="absolute">
+      <div className="closed">
+        <img src="./images/SumatranForest.jpg"/>
 
         <div className="elephant">
           <img src={data[0].src} className="wholeAnimal"/>
@@ -59,12 +60,14 @@ class App extends Component {
             </div>
           </div>
 
-      </div>)
+      </div>
+    </div>)
 
   } else if (this.state.timePeriod === "Past") {
     timePeriod = (
-    <div className="slide">
-    <img src="./images/IceAge.jpg" className="slidePic"/>
+    <div className="absolute" >
+    <div className="closed" >
+    <img src="./images/IceAge.jpg"/>
 
     <div className="wmammoth">
       <img src={data[4].src} className="wholeAnimal"/>
@@ -98,11 +101,13 @@ class App extends Component {
       </div>
     </div>
 
-    </div>)
+    </div>
+  </div>)
   } else {
     timePeriod = (
-      <div className="slide">
-      <img src="./images/Future_background.jpg"  className="slidePic"/>
+      <div className="absolute">
+      <div className="closed" >
+      <img src="./images/Future_background.jpg"/>
 
       <div className="animal_backL">
         <img src={data[8].src} className="wholeAnimal"/>
@@ -121,6 +126,7 @@ class App extends Component {
       </div>
 
       </div>
+      </div>
     )
   }
 
@@ -134,15 +140,15 @@ class App extends Component {
         <nav>
         <ul className="row">
 
-        <li className="col-md-2 col-md-offset-1 Past" onClick={ function() {this.handleClick("Past")}.bind(this) }><a href="#">Past</a></li>
+        <li className="col-md-2 col-md-offset-1 Past" id="slide" onClick={ function() {this.handleClick("Past")}.bind(this) }><a href="#">Past</a></li>
 
         <li className="col-md-2"><a href="#"><img src="./images/Minus.png"/></a></li>
 
-        <li className="col-md-2 present" onClick={function() {this.handleClick('present')}.bind(this)}><a href="#">Present</a></li>
+        <li className="col-md-2 present" id="slide" onClick={function() {this.handleClick('present')}.bind(this)}><a href="#">Present</a></li>
 
         <li className="col-md-2"><a href="#"><img src="./images/Plus.png"/></a></li>
 
-        <li className="col-md-2" onClick={function() {this.handleClick('Future')}.bind(this)}><a href="#">Future</a></li>
+        <li className="col-md-2" id="slide" onClick={function() {this.handleClick('Future')}.bind(this)}><a href="#">Future</a></li>
         </ul>
         </nav>
 
@@ -150,8 +156,7 @@ class App extends Component {
         <p>All information was retrieved from <a href="https://www.worldwildlife.org">World Wildlife Fund</a>. View their website for more information.
         </p>
         </footer>
-
-        </div>
+</div>
     );
   };
 }
