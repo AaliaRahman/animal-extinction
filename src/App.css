@@ -64,6 +64,7 @@ width: 100%;
 }
 li{
   padding-top: 1%;
+  cursor: pointer;
 }
 img{
   width: 100%;
@@ -73,29 +74,42 @@ img{
   flex-flow: column nowrap;
   width: 25%;
   z-index: 2;
-
 }
 .absolute{
   position: relative;
     overflow: hidden;
-    height: 600px;
+    height: 500px;
+    background: no-repeat center center scroll;
 }
-.closed{
-  animation: slide 4s forwards;
+.closed {
+  animation: slide 4s;
   animation-delay: 0s;
   position: absolute;
-  left: -200px;
-
+  left: 0px;
+  background: no-repeat center center scroll;
 }
 @keyframes slide {
 0% {
-  transform: translateX(0px);
+  transform: translateX(-100px);
 }
 100%{
-  transform: translateX(250px);
+  transform: translateX(0px);
 }
 }
-
+.minusSymbol{
+  position: absolute;
+  left: 3%;
+  top: 40%;
+  width: 3%;
+  cursor: pointer;
+}
+.plusSymbol{
+  position: absolute;
+  right: 3%;
+  top: 40%;
+  width: 3%;
+  cursor: pointer;
+}
 .elephant{
   position: absolute;
   top: 58%;
@@ -130,17 +144,26 @@ img{
   top: 55%;
   left: 70%;
 }
-.animal_backL{
+.sloth{
+  width: 80%;
   position: absolute;
   top: 55%;
   left: 30%;
-  width: 80%;
+}
+.animal_backL{
+  width: 60%;
+  position: absolute;
+  top: 40%;
+  left: 20%;
 }
 .animal_backR{
+  width: 30%;
   position: absolute;
   top: 40%;
   left: 50%;
-  width: 30%;
+}
+.futureCaption{
+  width: 50%;
 }
 
 /*@keyframes slide {

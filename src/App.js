@@ -18,6 +18,32 @@ class App extends Component {
       timePeriod: timePeriodWePassedInFromTheFunction})
       //We want the timePeriod to be the timePeriod/link that is clicked.
     };
+    moveForward(){
+      var forwardState;
+      if (this.state.timePeriod === 'Past') {
+        forwardState = 'present';
+      } else if (this.state.timePeriod === 'present') {
+        forwardState = 'Future';
+      } else {
+        forwardState = 'Future'
+      }
+        this.setState({
+          timePeriod: forwardState
+        })
+      };
+      moveBackward(){
+        var backwardState;
+        if (this.state.timePeriod === 'present') {
+          backwardState = 'Past';
+        } else if (this.state.timePeriod === 'Future') {
+          backwardState = 'present';
+        } else {
+          backwardState = 'Past'
+        }
+          this.setState({
+            timePeriod: backwardState
+          })
+        };
 
   render() {
 
@@ -65,8 +91,8 @@ class App extends Component {
 
   } else if (this.state.timePeriod === "Past") {
     timePeriod = (
-    <div className="absolute" >
-    <div className="closed" >
+    <div className="absolute">
+    <div className="closed">
     <img src="./images/IceAge.jpg"/>
 
     <div className="wmammoth">
@@ -93,7 +119,7 @@ class App extends Component {
       </div>
     </div>
 
-    <div className="animal_backL">
+    <div className="sloth">
       <img src={data[7].src} className="wholeAnimal"/>
       <div className="animalInfo">
         <h4>{data[7].name}</h4>
@@ -106,12 +132,12 @@ class App extends Component {
   } else {
     timePeriod = (
       <div className="absolute">
-      <div className="closed" >
+      <div className="closed">
       <img src="./images/Future_background.jpg"/>
 
       <div className="animal_backL">
         <img src={data[8].src} className="wholeAnimal"/>
-        <div className="animalInfo">
+        <div className="animalInfo futureCaption">
           <h4>{data[8].name}</h4>
           <p>{data[8].status}<br />{data[8].population}</p>
         </div>
@@ -134,13 +160,14 @@ class App extends Component {
 
       <div className="container">
       <h1>The History and Future of Animal Extinction</h1>
+      <img src="./images/left.png" className="minusSymbol" onClick={function(){this.moveBackward()}.bind(this)}/>
       {timePeriod}
-
+      <img src="./images/Right.png" className="plusSymbol" onClick={function(){this.moveForward()}.bind(this)}/>
 
         <nav>
         <ul className="row">
 
-        <li className="col-md-2 col-md-offset-1 Past" id="slide" onClick={ function() {this.handleClick("Past")}.bind(this) }><a href="#">Past</a></li>
+        <li className="col-md-2 col-md-offset-1 Past" id="slide" onClick={function() {this.handleClick("Past")}.bind(this)}><a href="#">100,000 BC</a></li>
 
         <li className="col-md-2"><a href="#"><img src="./images/Minus.png"/></a></li>
 
@@ -148,7 +175,7 @@ class App extends Component {
 
         <li className="col-md-2"><a href="#"><img src="./images/Plus.png"/></a></li>
 
-        <li className="col-md-2" id="slide" onClick={function() {this.handleClick('Future')}.bind(this)}><a href="#">Future</a></li>
+        <li className="col-md-2" id="slide" onClick={function() {this.handleClick('Future')}.bind(this)}><a href="#">2020+</a></li>
         </ul>
         </nav>
 
